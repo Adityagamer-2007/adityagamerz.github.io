@@ -1,0 +1,159 @@
+body{
+  font-family: Inter, Arial, sans-serif;
+  background:#f5f5f5;
+  box-sizing: border-box; /* Global box-sizing */
+}
+
+/* Universal box-sizing fix */
+*, *::before, *::after {
+    box-sizing: inherit; 
+}
+
+/* NAVBAR */
+.navbar .nav-link{
+  font-weight:600;
+  color:#282c3f;
+  position:relative;
+}
+.navbar .nav-link::after{
+  content:"";
+  height:2px;
+  width:0;
+  background:#ff3f6c;
+  position:absolute;
+  left:0;
+  bottom:-5px;
+  transition:.3s;
+}
+.navbar .nav-link:hover::after{
+  width:100%;
+}
+
+/* SEARCH */
+.search-wrapper{
+  background:#f5f5f6;
+  padding:6px 12px;
+  border-radius:6px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.search-wrapper input{
+  border:none;
+  background:transparent;
+  outline:none;
+  width:220px;
+}
+
+/* ICONS */
+.nav-icons{
+  display:flex;
+  gap:20px;
+}
+.nav-icons div{
+  text-align:center;
+  font-size:12px;
+  cursor:pointer;
+  transition:.3s;
+  position:relative;
+}
+.nav-icons i{
+  font-size:20px;
+}
+.nav-icons div:hover{
+  color:#ff3f6c;
+  transform:translateY(-3px);
+}
+.cart-icon .badge{
+  background:#ff3f6c;
+  color:#fff;
+  border-radius:50%;
+  position:absolute;
+  top:-6px;
+  right:-8px;
+}
+
+/* SLIDER */
+.carousel img{
+  width:100%;
+  transition:transform .7s;
+}
+.carousel-item:hover img{
+  transform:scale(1.06);
+}
+
+/* PRODUCTS */
+.product-slider h2{
+  font-size:28px;
+  margin:30px 0 15px;
+  font-weight:700;
+}
+.product-container{
+  display:flex;
+  gap:20px;
+  overflow-x:auto;
+  
+  /* SOLUTION FOCUS: Increased Padding on all sides */
+  /* Top padding added to prevent translateY cutting from the top */
+  /* Side padding added to prevent scale cutting from sides */
+  padding: 20px 40px 10px 40px; 
+  
+  /* Prevents items from stretching and ensures proper alignment */
+  align-items: flex-start;
+}
+.product-card{
+  min-width:180px;
+  background:#fff;
+  border-radius:16px;
+  padding:10px;
+  text-align:center;
+  box-shadow:0 10px 25px rgba(0,0,0,.15);
+  transition:.4s;
+  
+  /* SOLUTION FOCUS: Added margin. */
+  /* This margin ensures the card has enough space inside the container */
+  /* to move up by 10px (translateY(-10px)) without being cut by the container's top edge. */
+  margin: 0 0 10px 0; 
+  position: relative; /* z-index ko support karne ke liye */
+}
+.product-card:hover{
+  /* z-index ensures it renders above neighbouring elements */
+  transform:translateY(-10px) scale(1.03); 
+  z-index: 10;
+}
+.product-card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  border-radius:12px;
+}
+.product-card p{
+  margin-top:10px;
+  font-weight:600;
+}
+
+/* FOOTER */
+.footer-dark{
+  background:#111;
+  color:#bbb;
+  padding:50px 0 0;
+}
+.footer-dark h5{
+  color:#fff;
+  margin-bottom:15px;
+}
+.footer-dark ul li{
+  list-style:none;
+  margin-bottom:8px;
+  cursor:pointer;
+}
+.footer-dark ul li:hover{
+  color:#ff3f6c;
+}
+.footer-bottom{
+  background:#000;
+  color:#888;
+  text-align:center;
+  padding:12px;
+  margin-top:30px;
+}
