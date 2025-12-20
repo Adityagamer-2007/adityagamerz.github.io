@@ -1,0 +1,71 @@
+/* ===== Global ===== */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f4f4;
+}
+
+/* ===== Navbar ===== */
+.beauty-navbar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 30px;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.beauty-navbar h2 {
+    margin: 0;
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+.back {
+    text-decoration: none;
+    font-weight: bold;
+    color: #ff3f6c;
+}
+
+/* ===== Products Section ===== */
+.product {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    padding: 40px;
+}
+
+/* ===== Product Card ===== */
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+/* ===== Image ===== */
+.card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+/* ===== Text ===== */
+.card h3 {
+    margin: 12px 12px 6px;
+    font-size: 16px;
+    color: #333;
+}
+
+.card p {
+    margin: 0 12px 15px;
+    font-weight: bold;
+    color: #ff3f6c;
+    font-size: 15px;
+}
